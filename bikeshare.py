@@ -193,6 +193,12 @@ def print_in_tab(title,headers,values):
     pos_var = []
     pos_string = "{:<5}|"
 
+    # Ensure all headers and values in the list are strings, and if not, convert
+    for i, header in enumerate(headers):      
+        if type(header) != "str": headers[i] = str(header) 
+    for i, value in enumerate(values):      
+        if type(value) != "str": values[i] = str(value)   
+
     # If the lists of headers and values contain an unequal number of elements... just do regular print
     num_headers = len(headers)
     num_values  = len(values)    
