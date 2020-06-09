@@ -1,6 +1,8 @@
 import time
 import pandas as pd
+#import numpy as np     # I have eliminated this statement because numpy is not used thru the code
 from datetime import timedelta
+
 
 
 CITY_DATA = { 'Chicago': 'chicago.csv',
