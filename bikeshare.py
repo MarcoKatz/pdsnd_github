@@ -304,7 +304,7 @@ def time_stats(df,city,month,day,time_track=False):
     print_in_tab("",print_headers,print_values)
 
     if time_track:
-        print("\nThis took %s seconds." % (time.time() - start_time))
+        print("\nThis took {} seconds.".format(time.time() - start_time))
 
 
 
@@ -343,7 +343,7 @@ def station_stats(df,time_track=False):
     print_in_tab("",["Most popular Trip"],[popular_trip])
 
     if time_track:
-        print("\nThis took %s seconds." % (time.time() - start_time))
+        print("\nThis took {} seconds.".format(time.time() - start_time))
 
 
 
@@ -382,7 +382,7 @@ def trip_duration_stats(df,time_track=False):
     print_in_tab("",print_headers,print_values)
 
     if time_track:    
-        print("\nThis took %s seconds." % (time.time() - start_time))
+        print("\nThis took {} seconds.".format(time.time() - start_time))
 
 
 
@@ -474,7 +474,7 @@ def user_stats(df,time_track=False):
         print_in_tab("Years of birth data",print_headers,print_values)
 
     if time_track:
-        print("\nThis took %s seconds." % (time.time() - start_time))
+        print("\nThis took {} seconds.".format(time.time() - start_time))
 
 
 def print_raw_data(df):
@@ -490,7 +490,7 @@ def print_raw_data(df):
     while True:
         # Tweak the message so you can differentiate 1st from next passes
         more = "more " * min([seq,1])    
-        more_details = input("\nWould you like to see "+more+"raw data ? Enter y(es) or no: ")
+        more_details = input("\nWould you like to see {}raw data ? Enter y(es) or no: ".format(more))
         if (more_details.lower() != 'yes' and more_details.lower() != 'y') :
             break
         # Print in batches of 2 or 3 columns
@@ -535,7 +535,7 @@ def main():
         user_stats(df)
 
         # Print elapsed time
-        print("\nThis took %s seconds." % (time.time() - start_time))
+        print("\nThis took {} seconds.".format(time.time() - start_time))
         print('-'*40)        
 
         # On request of the user, print sets of raw data
