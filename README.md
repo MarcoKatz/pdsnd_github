@@ -18,4 +18,5 @@ bikeshare.py
 .gitignore (excludes the csv files that are needed to run the code)
 
 ### Credits
+Started from the bikeshare template provided by the course
 Extensive usage of stack overflow and other sources as part of learning process
